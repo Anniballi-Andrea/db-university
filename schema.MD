@@ -48,10 +48,11 @@ Pensiamo a quali entità (tabelle) creare per il nostro database e cerchiamo poi
 - name: VARCHAR(10) NOT NULL
 - surname: VARCHAR(10) NOT NULL
 - email: VARCHAR(30) NOT NULL
-- code: MEDIUMINT NOT NULL
+- code: MEDIUMINT UNIQUE NOT NULL
 
 # table name: appelli (entity name: appello)
 - id AUTO_INCREMENT UNIQUE NOT NULL
 - corso_id BIGINT UNIQUE NOT NULL
 - studente_id:BIGINT UNIQUE NOT NULL
+- date: DATE NOT NULL
 - vote: TINYINT NOT NULL
