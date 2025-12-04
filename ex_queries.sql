@@ -36,14 +36,14 @@ WHERE `name` LIKE "Corso di Laurea Magistrale%"*/
 
 #Da quanti dipartimenti è composta l'università? (12)'
 
-SELECT COUNT(id)
-FROM `departments`
+/*SELECT COUNT(id)
+FROM `departments`*/
 
 
 #Quanti sono gli insegnanti che non hanno un numero di telefono? (50)
 
-/*SELECT *
+SELECT COUNT(id)
 FROM `teachers`
-WHERE `phone` IS null*/
+WHERE `phone` IS null
 
 #-------------ex 2
