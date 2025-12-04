@@ -16,7 +16,14 @@ WHERE YEAR(`date_of_birth`) < 1995;*/
 
 #Selezionare tutti i corsi del primo semestre del primo anno di un qualsiasi corso di laurea (286)
 
-SELECT *
+/*SELECT *
 FROM `courses`
 WHERE `year` =1
-AND `period` = "I semestre"
+AND `period` = "I semestre"*/
+
+#Selezionare tutti gli appelli d'esame che avvengono nel pomeriggio (dopo le 14) del 20/06/2020 (21)
+
+SELECT *
+FROM `exams`
+WHERE hour(`hour`) > 13
+AND `date` = "2020-06-20"
