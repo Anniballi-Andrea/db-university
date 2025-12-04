@@ -34,6 +34,13 @@ AND `date` = "2020-06-20"*/
 FROM `degrees`
 WHERE `name` LIKE "Corso di Laurea Magistrale%"*/
 
-#Da quanti dipartimenti è composta l'università? (12)
+#Da quanti dipartimenti è composta l'università? (12)'
+
+/*SELECT *
+FROM `departments`*/
+
+#Quanti sono gli insegnanti che non hanno un numero di telefono? (50)
+
 SELECT *
-FROM `departments`
+FROM `teachers`
+WHERE `phone` IS null
