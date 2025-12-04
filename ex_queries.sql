@@ -23,7 +23,13 @@ AND `period` = "I semestre"*/
 
 #Selezionare tutti gli appelli d'esame che avvengono nel pomeriggio (dopo le 14) del 20/06/2020 (21)
 
-SELECT *
+/*SELECT *
 FROM `exams`
 WHERE hour(`hour`) > 13
-AND `date` = "2020-06-20"
+AND `date` = "2020-06-20"*/
+
+#Selezionare tutti i corsi di laurea magistrale (38)
+
+SELECT *
+FROM `degrees`
+WHERE `name` LIKE "Corso di Laurea Magistrale%"
