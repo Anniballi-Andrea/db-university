@@ -55,13 +55,19 @@ WHERE `phone` IS null*/
 FROM `students`
 GROUP BY YEAR(`enrolment_date`)*/
 
-#Contare gli insegnanti che hanno l'ufficio nello stesso edificio
+#Contare gli insegnanti che hanno l'ufficio nello stesso edificio'
 
 /*SELECT COUNT(id), `office_address`
 FROM `teachers`
 GROUP BY `office_address`*/
 
-#Calcolare la media dei voti di ogni appello d'esame
+#Calcolare la media dei voti di ogni appello d'esame'
 
-SELECT AVG(`vote`)
-FROM `exam_student`
+/*SELECT AVG(`vote`)
+FROM `exam_student`*/
+
+#Contare quanti corsi di laurea ci sono per ogni dipartimento
+
+SELECT count(`id`), `degree_id`
+FROM `courses`
+group by `degree_id`
