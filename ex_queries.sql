@@ -42,8 +42,14 @@ FROM `departments`*/
 
 #Quanti sono gli insegnanti che non hanno un numero di telefono? (50)
 
-SELECT COUNT(id)
+/*SELECT COUNT(id)
 FROM `teachers`
-WHERE `phone` IS null
+WHERE `phone` IS null*/
 
-#-------------ex 2
+#-------------ex_2_query_group--------------
+
+#Contare quanti iscritti ci sono stati ogni anno
+
+SELECT  COUNT(id),YEAR(enrolment_date)
+FROM `students`
+GROUP BY YEAR(enrolment_date)
