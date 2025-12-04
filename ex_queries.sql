@@ -1,70 +1,70 @@
 #Selezionare tutti gli studenti nati nel 1990 (160)
 
-/*SELECT *
+/SELECT *
 FROM `students`
-WHERE YEAR(`date_of_birth`) = 1990;*/
+WHERE YEAR(`date_of_birth`) = 1990;
 
 #Selezionare tutti i corsi che valgono più di 10 crediti (479)
-/*SELECT*
+SELECT*
 FROM `courses`
-WHERE `cfu` > 10*/
+WHERE `cfu` > 10
 
 #Selezionare tutti gli studenti che hanno più di 30 anni
-/*SELECT *
+SELECT *
 FROM `students`
-WHERE YEAR(`date_of_birth`) < 1995;*/
+WHERE YEAR(`date_of_birth`) < 1995;
 
 #Selezionare tutti i corsi del primo semestre del primo anno di un qualsiasi corso di laurea (286)
 
-/*SELECT *
+SELECT *
 FROM `courses`
 WHERE `year` =1
-AND `period` = "I semestre"*/
+AND `period` = "I semestre"
 
 #Selezionare tutti gli appelli d'esame che avvengono nel pomeriggio (dopo le 14) del 20/06/2020 (21)'
 
-/*SELECT *
+SELECT *
 FROM `exams`
 WHERE hour(`hour`) > 13
-AND `date` = "2020-06-20"*/
+AND `date` = "2020-06-20"
 
 #Selezionare tutti i corsi di laurea magistrale (38)
 
-/*SELECT *
+SELECT *
 FROM `degrees`
-WHERE `name` LIKE "Corso di Laurea Magistrale%"*/
+WHERE `name` LIKE "Corso di Laurea Magistrale%"
 
 #Da quanti dipartimenti è composta l'università? (12)'
 
-/*SELECT COUNT(id)
-FROM `departments`*/
+SELECT COUNT(id)
+FROM `departments`
 
 
 #Quanti sono gli insegnanti che non hanno un numero di telefono? (50)
 
-/*SELECT COUNT(id)
+SELECT COUNT(id)
 FROM `teachers`
-WHERE `phone` IS null*/
+WHERE `phone` IS null
 
 #-------------ex_2_query_group--------------
 
 #Contare quanti iscritti ci sono stati ogni anno
 
-/*SELECT  COUNT(id),YEAR(`enrolment_date`)
+SELECT  COUNT(id),YEAR(`enrolment_date`)
 
 FROM `students`
-GROUP BY YEAR(`enrolment_date`)*/
+GROUP BY YEAR(`enrolment_date`)
 
 #Contare gli insegnanti che hanno l'ufficio nello stesso edificio'
 
-/*SELECT COUNT(id), `office_address`
+SELECT COUNT(id), `office_address`
 FROM `teachers`
-GROUP BY `office_address`*/
+GROUP BY `office_address`
 
 #Calcolare la media dei voti di ogni appello d'esame'
 
-/*SELECT AVG(`vote`)
-FROM `exam_student`*/
+SELECT AVG(`vote`)
+FROM `exam_student`
 
 #Contare quanti corsi di laurea ci sono per ogni dipartimento
 
