@@ -96,3 +96,14 @@ FROM `degrees`
 JOIN `teachers`
 WHERE `teachers`.`name` = "Fulvio"
 AND `teachers`.`surname`= "Amato"
+
+/*4. Selezionare tutti gli studenti con i dati relativi al corso di laurea a cui
+sono iscritti e il relativo dipartimento, in ordine alfabetico per cognome e nome*/
+
+SELECT `students`.`id` AS `id`, `students`.`name` AS `student_name`, `students`.`surname` AS `student_surname`, `degrees`.`name` AS `degree_name`, `departments`.`name` AS `department_name` 
+FROM `students`
+JOIN `degrees`
+JOIN `departments`
+WHERE `students`.`degree_id`= `degrees`.`id`
+AND `degrees`.`department_id` = `departments`.`id`
+ORDER BY `student_surname` ASC, `student_name` ASC
